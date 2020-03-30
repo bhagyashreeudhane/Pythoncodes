@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    students=[]
+    scorelist=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name,score])
+        scorelist.append(score)
+
+    
+    second=sorted(list(dict.fromkeys(scorelist)))[1]
+
+    arr=[]
+    for name,score in students:
+        if score==second:
+            arr.append(name)
+    arr.sort()
+    for t in range(len(arr)):
+        print(arr[t])
