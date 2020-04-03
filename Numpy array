@@ -16,7 +16,7 @@ num_array=numpy.array(arr)
 minlist=numpy.min(num_array,axis=1)
 print(max(minlist))
     
-
+____________________________________________
 
 
 You are given a 2-D array of size m*n.
@@ -41,3 +41,16 @@ print(numpy.var(num_arr,axis=0))
 std1=numpy.std(num_arr)
 #print('%.11f'%std1)
 print(std1)
+
+________________________________________________
+
+You are given the coefficients of a polynomial P.
+Your task is to find the value of P at point x.
+
+import numpy
+
+arr=list(map(float,input().split()))
+n=int(input())
+a=numpy.polyval(arr,n)
+
+print(a)
