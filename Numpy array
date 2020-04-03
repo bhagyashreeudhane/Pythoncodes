@@ -17,3 +17,27 @@ minlist=numpy.min(num_array,axis=1)
 print(max(minlist))
     
 
+
+
+You are given a 2-D array of size m*n.
+Your task is to find:
+
+The mean along axis 1
+The var along axis 0
+The std along axis None
+
+
+import numpy
+
+m,n=input().split()
+arr=[]
+for i in range(int(m)):
+    l=list(map(int,input().split()))
+    arr.append(l)
+num_arr=numpy.array(arr)
+numpy.set_printoptions(legacy='1.13')
+print(numpy.mean(num_arr,axis=1))
+print(numpy.var(num_arr,axis=0))
+std1=numpy.std(num_arr)
+#print('%.11f'%std1)
+print(std1)
