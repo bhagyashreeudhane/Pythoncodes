@@ -1,0 +1,19 @@
+You are given a 2-D array with dimensions m*n.
+Your task is to perform the min function over axis 1 and then find the max of that.
+
+
+
+import numpy
+
+n=input().split(' ')
+N=int(n[0])
+arr=[]
+newarr=numpy.array([])
+for i in range(N):
+    l=list(map(int,input().split()))
+    arr.append(l)
+num_array=numpy.array(arr)
+minlist=numpy.min(num_array,axis=1)
+print(max(minlist))
+    
+
